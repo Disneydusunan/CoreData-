@@ -99,7 +99,9 @@
     return _persistentStoreCoordinator;
 }
 
-
+/**
+ *上下文，操作对象的增删改查
+ **/
 - (NSManagedObjectContext *)managedObjectContext {
     // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)
     if (_managedObjectContext != nil) {
@@ -116,7 +118,9 @@
 }
 
 #pragma mark - Core Data Saving support
-
+/**
+ *保存方法
+ **/
 - (void)saveContext {
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
